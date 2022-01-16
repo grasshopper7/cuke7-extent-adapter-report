@@ -6,8 +6,8 @@ import io.cucumber.testng.CucumberOptions;
 
 //@RunWith(Cucumber.class)
 @CucumberOptions(plugin = { "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:", "summary",
-/* "rerun:target/rerun1.txt" */ } /* , tags = "@misc" */ )
-public class RunCukeIT  extends AbstractTestNGCucumberTests  {
+		/* "rerun:target/rerun1.txt" */ }/* , tags = "@dialect" */)
+public class RunCukeIT extends AbstractTestNGCucumberTests {
 
 	/*
 	 * @Override

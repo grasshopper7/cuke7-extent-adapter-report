@@ -2,7 +2,7 @@
 @dialect
 Właściwość: Polish Scenario And Scenario Outline
 
-  Szablon scenariusza: Scenario Outline Row <row_num>
+  Szablon scenariusza: Polish SO Row <row_num>
     Zakładając, że Write a 'given' step with precondition in '<scenario_num><row_num>'
     Kiedy Complete action in 'when' step in '<scenario_num><row_num>'
     Wtedy Validate the outcome in 'then' step in '<scenario_num><row_num>'
