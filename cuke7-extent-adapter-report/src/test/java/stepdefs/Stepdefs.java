@@ -143,7 +143,7 @@ public class Stepdefs {
 	}
 
 	@BeforeStep(value = "@website or @large", order = 1)
-	public void beforeSite(Scenario scenario) throws Exception{
+	public void beforeSite(Scenario scenario) throws Exception {
 		this.scenario = scenario;
 
 		WebDriverManager.chromedriver().setup();
@@ -186,4 +186,25 @@ public class Stepdefs {
 		throw new SkipException("SKip it");
 	}
 
+	@Given("Go to capture 2 images in one step")
+	public void twoImages() throws Exception {
+		WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		Thread.sleep(500);
+
+		driver.get("https://github.com/");
+		Thread.sleep(500);
+		TakesScreenshot ts = (TakesScreenshot) driver;
+		byte[] screenshot = ts.getScreenshotAs(OutputType.BYTES);
+		scenario.attach(screenshot, "image/png", "github");
+
+		driver.get("https://stackoverflow.com/");
+		Thread.sleep(500);
+		ts = (TakesScreenshot) driver;
+		screenshot = ts.getScreenshotAs(OutputType.BYTES);
+		scenario.attach(screenshot, "image/png", "stackoverflow");
+
+		driver.quit();
+	}
 }
