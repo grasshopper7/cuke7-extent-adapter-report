@@ -1,9 +1,10 @@
 package stepdefs;
 
-import static org.testng.Assert.assertEquals;
+//import static org.testng.Assert.assertEquals;
 
-//import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertEquals;
 
+import java.time.Duration;
 import java.util.List;
 import java.util.Random;
 
@@ -11,8 +12,10 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 //import org.testng.SkipException;
-import org.testng.SkipException;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.cucumber.java.After;
 import io.cucumber.java.AfterStep;
@@ -95,7 +98,7 @@ public class Stepdefs {
 	@When("Complete action in {string} step in {string}")
 	@Then("Validate the outcome in {string} step in {string}")
 	public void step(String step, String scenario) throws InterruptedException {
-		System.out.format("%s step from %s.\n", step.toUpperCase(), scenario.toUpperCase());
+		//System.out.format("%s step from %s.\n", step.toUpperCase(), scenario.toUpperCase());
 		this.scenario.log("log HATE THIS");
 		Thread.sleep(1000);
 	}
@@ -138,6 +141,12 @@ public class Stepdefs {
 	public void visitweb(String site) throws Exception {
 		driver.get(site);
 
+		// System.out.println(driver.getTitle());
+
+		WebDriverWait waitDrv = new WebDriverWait(driver, Duration.ofMinutes(1));
+		waitDrv.until(ExpectedConditions.or(ExpectedConditions.titleContains("GitHub"),
+				ExpectedConditions.titleContains("Stack Overflow")));
+
 		this.site = site;
 		scenario.log("scenario website name - " + site);
 	}
@@ -148,6 +157,7 @@ public class Stepdefs {
 
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
+
 		driver.manage().window().maximize();
 		Thread.sleep(500);
 
@@ -183,11 +193,12 @@ public class Stepdefs {
 
 	@Given("Skipped step definition")
 	public void skippedStep() {
-		throw new SkipException("SKip it");
+		// throw new SkipException("SKip it");
 	}
 
 	@Given("Go to capture 2 images in one step")
 	public void twoImages() throws Exception {
+
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
