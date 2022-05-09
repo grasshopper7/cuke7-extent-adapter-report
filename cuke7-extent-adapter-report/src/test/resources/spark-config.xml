@@ -18,9 +18,11 @@
 
 		<!-- report name - displayed at top-nav -->
 		<reportName>Grasshopper Report</reportName>
-		
+
 		<!-- view report without internet -->
 		<offlineMode>false</offlineMode>
+
+		<thumbnailForBase64>true</thumbnailForBase64>
 
 		<!-- custom javascript -->
 		<js></js>
