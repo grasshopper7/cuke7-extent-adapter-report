@@ -6,7 +6,7 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(plugin = { "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:", "summary"
+@CucumberOptions(features = "src/test/resources/stepdefs/",plugin = { "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:", "summary"
 /* "rerun:target/rerun1.txt" */ } /* , tags = "@website" */ )
 public class RunCukeIT /* extends AbstractTestNGCucumberTests */ {
 
