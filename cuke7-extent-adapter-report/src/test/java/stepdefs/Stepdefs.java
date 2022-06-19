@@ -1,8 +1,6 @@
 package stepdefs;
 
-//import static org.testng.Assert.assertEquals;
-
-import static org.junit.Assert.assertEquals;
+import static org.testng.Assert.assertEquals;
 
 import java.time.Duration;
 import java.util.List;
@@ -12,14 +10,15 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-//import org.testng.SkipException;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.SkipException;
 
 import io.cucumber.java.After;
+import io.cucumber.java.AfterAll;
 import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
+import io.cucumber.java.BeforeAll;
 import io.cucumber.java.BeforeStep;
 import io.cucumber.java.PendingException;
 import io.cucumber.java.Scenario;
@@ -37,6 +36,16 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class Stepdefs {
 
 	private Scenario scenario;
+
+	@BeforeAll
+	public static void beforeAll() {
+		System.out.println("BEFORE ALL HOOK");
+	}
+
+	@AfterAll
+	public static void afterAll() {
+		System.out.println("AFTER ALL HOOK");
+	}
 
 	@Before(value = "not @failure")
 	public void before(Scenario scenario) {
@@ -98,7 +107,8 @@ public class Stepdefs {
 	@When("Complete action in {string} step in {string}")
 	@Then("Validate the outcome in {string} step in {string}")
 	public void step(String step, String scenario) throws InterruptedException {
-		//System.out.format("%s step from %s.\n", step.toUpperCase(), scenario.toUpperCase());
+		// System.out.format("%s step from %s.\n", step.toUpperCase(),
+		// scenario.toUpperCase());
 		this.scenario.log("log HATE THIS");
 		Thread.sleep(1000);
 	}
@@ -193,7 +203,7 @@ public class Stepdefs {
 
 	@Given("Skipped step definition")
 	public void skippedStep() {
-		// throw new SkipException("SKip it");
+		throw new SkipException("SKip it");
 	}
 
 	@Given("Go to capture 2 images in one step")

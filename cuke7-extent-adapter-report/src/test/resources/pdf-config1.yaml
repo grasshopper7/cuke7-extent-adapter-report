@@ -5,6 +5,7 @@ displayFeature: true
 displayScenario: true
 displayDetailed: true
 displayAttached: true
+displayExpanded: false
 
 dashboardConfig:
    title: Cucumber PDF Report

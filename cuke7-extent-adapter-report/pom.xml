@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>cuke7-extent-adapter-report</groupId>
 	<artifactId>cuke7-extent-adapter-report</artifactId>
-	<version>1.5.1</version>
+	<version>1.6.0</version>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -18,7 +18,7 @@
 		<dependency>
 			<groupId>tech.grasshopper</groupId>
 			<artifactId>extentreports-cucumber7-adapter</artifactId>
-			<version>1.5.1</version>
+			<version>1.6.0</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
@@ -29,9 +29,11 @@
 		</dependency>
 		<!-- <dependency> <groupId>io.cucumber</groupId> <artifactId>cucumber-testng</artifactId> 
 			<version>${cucumber.version}</version> <scope>test</scope> </dependency> -->
+		<!-- <dependency> <groupId>io.cucumber</groupId> <artifactId>cucumber-junit</artifactId> 
+			<version>${cucumber.version}</version> <scope>test</scope> </dependency> -->
 		<dependency>
 			<groupId>io.cucumber</groupId>
-			<artifactId>cucumber-junit</artifactId>
+			<artifactId>cucumber-testng</artifactId>
 			<version>${cucumber.version}</version>
 			<scope>test</scope>
 		</dependency>
