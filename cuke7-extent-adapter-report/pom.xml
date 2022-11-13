@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>cuke7-extent-adapter-report</groupId>
 	<artifactId>cuke7-extent-adapter-report</artifactId>
-	<version>1.8.4</version>
+	<version>1.9.0</version>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
