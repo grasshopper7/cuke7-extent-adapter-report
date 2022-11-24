@@ -4,21 +4,21 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>cuke7-extent-adapter-report</groupId>
 	<artifactId>cuke7-extent-adapter-report</artifactId>
-	<version>1.9.1</version>
+	<version>1.9.2</version>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
-		<cucumber.version>7.8.0</cucumber.version>
+		<cucumber.version>7.2.3</cucumber.version>
 	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>tech.grasshopper</groupId>
 			<artifactId>extentreports-cucumber7-adapter</artifactId>
-			<version>1.9.1</version>
+			<version>1.9.2</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
@@ -40,7 +40,7 @@
 		<dependency>
 			<groupId>io.github.bonigarcia</groupId>
 			<artifactId>webdrivermanager</artifactId>
-			<version>5.3.0</version>
+			<version>5.3.1</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
