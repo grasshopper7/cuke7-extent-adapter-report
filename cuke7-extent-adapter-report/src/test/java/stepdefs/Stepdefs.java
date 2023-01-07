@@ -1,5 +1,7 @@
 package stepdefs;
 
+//import static org.testng.Assert.assertEquals;
+
 import static org.junit.Assert.assertEquals;
 
 import java.time.Duration;
@@ -26,11 +28,6 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-
-/*import cucumber.api.*;
-import cucumber.api.java.*;
-import cucumber.api.java.en.*;*/
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Stepdefs {
