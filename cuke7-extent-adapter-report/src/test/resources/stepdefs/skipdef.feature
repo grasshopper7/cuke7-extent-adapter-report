@@ -1,4 +1,4 @@
-@skip
+@skip @dev_sskkiipp @aut_piks
 Feature: Scenarios With No Step Definitions
   Feature description
 

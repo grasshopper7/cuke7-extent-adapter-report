@@ -1,4 +1,4 @@
-@failure
+@failure @exception
 Feature: Hook and step failures
 
   Scenario: Before Hook

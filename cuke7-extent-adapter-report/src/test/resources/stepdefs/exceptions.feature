@@ -7,10 +7,12 @@ Feature: Exception
   Scenario: No Exception
     Given Do not raise exception
 
+  @dev_SE
   Scenario: Other Exception
     Given Raise exception
     Given Raise exception
 
+  @aut_Agatha
   Scenario Outline: Check exception <row_num>
     #Given Raise exception Skip
     Given Raise exception
