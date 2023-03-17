@@ -1,6 +1,8 @@
 package stepdefs;
 
-import static org.testng.Assert.assertEquals;
+//import static org.testng.Assert.assertEquals;
+
+import static org.junit.Assert.assertEquals;
 
 import java.time.Duration;
 import java.util.List;
@@ -12,7 +14,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.SkipException;
+//import org.testng.SkipException;
 
 import io.cucumber.java.After;
 import io.cucumber.java.AfterAll;
@@ -26,11 +28,6 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-
-/*import cucumber.api.*;
-import cucumber.api.java.*;
-import cucumber.api.java.en.*;*/
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Stepdefs {
@@ -203,7 +200,7 @@ public class Stepdefs {
 
 	@Given("Skipped step definition")
 	public void skippedStep() {
-		throw new SkipException("SKip it");
+		// throw new SkipException("SKip it");
 	}
 
 	@Given("Go to capture 2 images in one step")

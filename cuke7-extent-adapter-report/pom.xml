@@ -4,21 +4,21 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>cuke7-extent-adapter-report</groupId>
 	<artifactId>cuke7-extent-adapter-report</artifactId>
-	<version>1.10.1</version>
+	<version>1.11.0</version>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<maven.compiler.source>11</maven.compiler.source>
 		<maven.compiler.target>11</maven.compiler.target>
-		<cucumber.version>7.11.0</cucumber.version>
+		<cucumber.version>7.11.1</cucumber.version>
 	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>tech.grasshopper</groupId>
 			<artifactId>extentreports-cucumber7-adapter</artifactId>
-			<version>1.10.1</version>
+			<version>1.11.0</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
@@ -27,11 +27,9 @@
 			<version>${cucumber.version}</version>
 			<scope>test</scope>
 		</dependency>
-		<!-- <dependency> <groupId>io.cucumber</groupId> <artifactId>cucumber-junit</artifactId> 
-			<version>${cucumber.version}</version> <scope>test</scope> </dependency> -->
 		<dependency>
 			<groupId>io.cucumber</groupId>
-			<artifactId>cucumber-testng</artifactId>
+			<artifactId>cucumber-junit</artifactId>
 			<version>${cucumber.version}</version>
 			<scope>test</scope>
 		</dependency>
@@ -71,7 +69,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-failsafe-plugin</artifactId>
-				<version>3.0.0-M4</version>
+				<version>3.0.0-M3</version>
 				<executions>
 					<execution>
 						<goals>
@@ -79,10 +77,10 @@
 							<goal>verify</goal>
 						</goals>
 						<!-- <configuration> <properties> <property> <name>dataproviderthreadcount</name> 
-							<value>4</value> </property> </properties> </configuration> -->
-						<!-- <configuration> <parallel>methods</parallel> <threadCount>4</threadCount> 
-							<perCoreThreadCount>true</perCoreThreadCount> </configuration> -->
+							<value>10</value> </property> </properties> </configuration> -->
 
+						<!-- <configuration> <parallel>classes</parallel> <threadCount>3</threadCount> 
+							</configuration> -->
 					</execution>
 				</executions>
 			</plugin>
